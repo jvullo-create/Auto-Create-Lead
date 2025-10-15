@@ -4,53 +4,47 @@
   "description": "Schema for extracting key Bizcap lead fields",
   "type": "object",
   "properties": {
-    "companyName": { "type": "string", "description": "Name of the company" },
-    "firstName": { "type": "string", "description": "First name of the applicant" },
-    "lastName": { "type": "string", "description": "Last name of the applicant" },
-    "abn": { "type": "string", "description": "Australian Business Number" },
+    "companyName": { "type": "string" },
+    "firstName": { "type": "string" },
+    "lastName": { "type": "string" },
+    "abn": { "type": "string" },
     "phone": {
       "type": "string",
-      "pattern": "^\\+?[1-9]\\d{1,14}$",
-      "description": "Primary phone number in E.164 format"
+      "pattern": "^\\+?[1-9]\\d{1,14}$"
     },
     "email": {
       "type": "string",
-      "format": "email",
-      "description": "Primary email address"
+      "format": "email"
     },
     "amountRequested": {
       "type": "number",
-      "minimum": 0,
-      "description": "Requested funding amount"
+      "minimum": 0
     },
     "averageMonthlyTurnover": {
       "type": "number",
-      "minimum": 0,
-      "description": "Average monthly turnover"
+      "minimum": 0
     },
-    "documentId": { "type": "string", "description": "Reference document ID" },
-    "loanPurpose": { "type": "string", "description": "Purpose of the loan" },
-    "brokerContactName": { "type": "string", "description": "Name of the broker contact" },
+    "documentId": { "type": "string" },
+    "loanPurpose": { "type": "string" },
+    "brokerContactName": { "type": "string" },
     "brokerContactEmail": {
       "type": "string",
-      "format": "email",
-      "description": "Email address of the broker contact"
+      "format": "email"
     },
     "brokerContactNumber": {
       "type": "string",
-      "pattern": "^\\+?[1-9]\\d{1,14}$",
-      "description": "Phone number of the broker contact in E.164 format"
+      "pattern": "^\\+?[1-9]\\d{1,14}$"
     },
-    "brokerBusinessName": {
-      "type": "string",
-      "description": "Business name of the broker"
-    },
+    "brokerBusinessName": { "type": "string" },
     "callClientOrBroker": {
       "type": "string",
-      "enum": ["Call Client", "Call Broker"],
-      "description": "Who to call: either 'Call Client' or 'Call Broker'"
+      "enum": ["Call Client", "Call Broker"]
     }
   },
-  "required": ["companyName", "firstName", "lastName"],
+  "required": [
+    "companyName",
+    "firstName",
+    "lastName"
+  ],
   "additionalProperties": false
 }
