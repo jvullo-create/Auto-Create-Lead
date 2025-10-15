@@ -14,7 +14,7 @@
     },
     "email": {
       "type": "string",
-      "format": "email"
+      "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
     },
     "amountRequested": {
       "type": "number",
