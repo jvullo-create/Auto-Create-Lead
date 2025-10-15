@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lead Payload Schema",
+  "description": "Schema for extracting key Bizcap lead fields",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Name of the company"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "First name of the applicant"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name of the applicant"
+    },
+    "abn": {
+      "type": "string",
+      "description": "Australian Business Number"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\+?[1-9]\\d{1,14}$",
+      "description": "Primary phone number in E.164 format"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Primary email address"
+    },
+    "amountRequested": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Requested funding amount"
+    },
+    "averageMonthlyTurnover": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Average monthly turnover"
+    },
+    "documentId": {
+      "type": "string",
+      "description": "Reference document ID"
+    },
+    "loanPurpose": {
+      "type": "string",
+      "description": "Purpose of the loan"
+    },
+    "brokerContactName": {
+      "type": "string",
+      "description": "Name of the broker contact"
+    },
+    "brokerContactEmail": {
+      "type": "string",
+      "format": "email",
+      "description": "Email address of the broker contact"
+    },
+    "brokerContactNumber": {
+      "type": "string",
+      "pattern": "^\\+?[1-9]\\d{1,14}$",
+      "description": "Phone number of the broker contact in E.164 format"
+    },
+    "brokerBusinessName": {
+      "type": "string",
+      "description": "Business name of the broker"
+    },
+    "callClientOrBroker": {
+      "type": "string",
+      "enum": ["Call Client", "Call Broker"],
+      "description": "Who to call: either 'Call Client' or 'Call Broker'"
+    }
+  },
+  "required": [
+    "companyName",
+    "firstName",
+    "lastName"
+  ],
+  "additionalProperties": false
+}
