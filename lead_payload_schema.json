@@ -4,22 +4,10 @@
   "description": "Schema for extracting key Bizcap lead fields",
   "type": "object",
   "properties": {
-    "companyName": {
-      "type": "string",
-      "description": "Name of the company"
-    },
-    "firstName": {
-      "type": "string",
-      "description": "First name of the applicant"
-    },
-    "lastName": {
-      "type": "string",
-      "description": "Last name of the applicant"
-    },
-    "abn": {
-      "type": "string",
-      "description": "Australian Business Number"
-    },
+    "companyName": { "type": "string", "description": "Name of the company" },
+    "firstName": { "type": "string", "description": "First name of the applicant" },
+    "lastName": { "type": "string", "description": "Last name of the applicant" },
+    "abn": { "type": "string", "description": "Australian Business Number" },
     "phone": {
       "type": "string",
       "pattern": "^\\+?[1-9]\\d{1,14}$",
@@ -40,18 +28,9 @@
       "minimum": 0,
       "description": "Average monthly turnover"
     },
-    "documentId": {
-      "type": "string",
-      "description": "Reference document ID"
-    },
-    "loanPurpose": {
-      "type": "string",
-      "description": "Purpose of the loan"
-    },
-    "brokerContactName": {
-      "type": "string",
-      "description": "Name of the broker contact"
-    },
+    "documentId": { "type": "string", "description": "Reference document ID" },
+    "loanPurpose": { "type": "string", "description": "Purpose of the loan" },
+    "brokerContactName": { "type": "string", "description": "Name of the broker contact" },
     "brokerContactEmail": {
       "type": "string",
       "format": "email",
@@ -72,10 +51,6 @@
       "description": "Who to call: either 'Call Client' or 'Call Broker'"
     }
   },
-  "required": [
-    "companyName",
-    "firstName",
-    "lastName"
-  ],
+  "required": ["companyName", "firstName", "lastName"],
   "additionalProperties": false
 }
